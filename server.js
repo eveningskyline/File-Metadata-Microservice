@@ -40,10 +40,11 @@ app.route('/')
 		  res.sendFile(process.cwd() + '/views/index.html');
     })
 
-app.post('/get-file-size', upload.single('avatar'), function (req, res, next) {
+app.post('/get-file-size', upload.single('fileToUpload'), function (req, res, next) {
   // req.file is the `avatar` file 
   // req.body will hold the text fields, if there were any 
-  res.send(req.file.toString())
+
+  res.send()
 })
 
 // Respond not found to all the wrong routes
