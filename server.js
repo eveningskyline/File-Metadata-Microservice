@@ -44,7 +44,8 @@ app.post('/get-file-size', upload.single('fileToUpload'), function (req, res, ne
   // req.file is the `avatar` file 
   // req.body will hold the text fields, if there were any 
 
-  res.send()
+  var myJSON = { "size": req.file["size"]}
+  res.send(myJSON)
 })
 
 // Respond not found to all the wrong routes
